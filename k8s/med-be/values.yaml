@@ -44,6 +44,8 @@ extraEnvs:
     value: admin@admin.com
   - name: PGADMIN_DEFAULT_PASSWORD
     value: admin
+  - name: SERVER_PORT
+    value: "8080"
 serviceAccount:
   create: true
   annotations: {}
