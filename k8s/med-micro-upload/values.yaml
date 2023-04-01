@@ -13,7 +13,7 @@ extraEnvs:
   - name: AWS_ACCESS_KEY_ID
     value: AKIA23F3G5BOMIX7CCXQ
   - name: AWS_SECRET_ACCESS_KEY
-    value: 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
+    value: default
   - name: AWS_REGION
     value: ap-southeast-1
   - name: BUCKET_NAME
@@ -25,7 +25,7 @@ extraEnvs:
   - name: DB_DATABASE
     value: med-db
   - name: DB_HOST
-    value: db-med-dev.c60v4o2muaf0.ap-southeast-1.rds.amazonaws.com
+    value: default
   - name: DB_PORT
     value: "3306"
   - name: PGADMIN_DEFAULT_EMAIL
