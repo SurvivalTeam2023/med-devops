@@ -1,13 +1,27 @@
 replicaCount: 1
 
 image:
-  repository: banhsbao/noise-project
+  repository: public.ecr.aws/y8u9i3r8/med-be
   pullPolicy: Always
-  tag: latest
+  tag: med-ai-2023-07-05T09-56-49-181Z
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+
+extraEnvs:
+  - name: DB_USERNAME
+    value: root
+  - name: DB_PASSWORD
+    value: JCpulWbTp5
+  - name: DB_DATABASE
+    value: med-dump-ai
+  - name: DB_HOST
+    value: 14.225.204.74
+  - name: DB_PORT
+    value: "3306"
+  - name: SERVER_PORT
+    value: "8082"
 serviceAccount:
   create: true
   annotations: {}
@@ -21,10 +35,9 @@ securityContext: {}
 
 service:
   type: LoadBalancer
-  containerPort: 80
-  targetPort: 80
-  port: 9999
-  
+  containerPort: 8082
+  targetPort: 8082
+  port: 80
 ingress:
   enabled: false
   className: ""
