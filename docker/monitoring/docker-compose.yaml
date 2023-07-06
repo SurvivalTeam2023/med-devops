@@ -22,6 +22,7 @@ services:
       - cadvisor
   grafana:
     image: grafana/grafana
+    user: "0"
     ports:
       - 1002:3000
     volumes:
