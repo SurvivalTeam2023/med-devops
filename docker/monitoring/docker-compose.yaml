@@ -25,7 +25,7 @@ services:
     ports:
       - 1002:3000
     volumes:
-      - ./data:/var/lib/grafana
+      - $PWD/data:/var/lib/grafana
     restart: always
     depends_on:
       - prometheus
