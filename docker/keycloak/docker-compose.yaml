@@ -4,14 +4,14 @@ services:
     image: quay.io/keycloak/keycloak:18.0.2-legacy
     environment:
       DB_VENDOR: MYSQL
-      DB_ADDR: db-med-dev.c60v4o2muaf0.ap-southeast-1.rds.amazonaws.com
+      DB_ADDR: 167.86.69.42
       DB_DATABASE: keycloak
       DB_USER: root
       DB_SCHEMA: public
-      DB_PASSWORD: med123456
+      DB_PASSWORD: sX0thYwNEl
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: password
-      KC_HOSTNAME: http://14.225.204.74
+      KC_HOSTNAME: http://167.86.69.42
       PROXY_ADDRESS_FORWARDING: "true"
       # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
       #JDBC_PARAMS: "ssl=true"
