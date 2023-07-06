@@ -13,19 +13,19 @@ extraEnvs:
   - name: KEYCLOAK_HOST
     value: http://auth.mediatation.tokyo
   - name: KEYCLOAK_REALM_ClIENT
-    value: med-app
+    value: med-app-playground
   - name: KEYCLOAK_CLIENT_ID
-    value: med-app
+    value: med-app-playground
   - name: KEYCLOAK_CLIENT_SECRECT
-    value: QfSAgO1NhoERCZBENnLoytgy0ea1cbyE
+    value: 7h37hsWaRV4vRnHJxFBAc3PZ4yDkFGGb
   - name: KEYCLOAK_ADMIN_ID
     value: admin
   - name: KEYCLOAK_ADMIN_PASSWORD
-    value: "@Ditmecuocdoi6969"
+    value: "password"
   - name: AWS_ACCESS_KEY_ID
-    value: AKIA23F3G5BOMIX7CCXQ
+    value: ""
   - name: AWS_SECRET_ACCESS_KEY
-    value: default
+    value: ""
   - name: AWS_REGION
     value: ap-southeast-1
   - name: BUCKET_NAME
@@ -33,11 +33,11 @@ extraEnvs:
   - name: DB_USERNAME
     value: root
   - name: DB_PASSWORD
-    value: med123456
+    value: "sX0thYwNEl"
   - name: DB_DATABASE
-    value: med-db
+    value: "playground_be"
   - name: DB_HOST
-    value: default
+    value: "167.86.69.42"
   - name: DB_PORT
     value: "3306"
   - name: PGADMIN_DEFAULT_EMAIL
@@ -45,13 +45,13 @@ extraEnvs:
   - name: PGADMIN_DEFAULT_PASSWORD
     value: admin
   - name: PAYPAL_PRODUCT_ID
-    value: PROD-6GG98180T5582525W
+    value: "PROD-6GG98180T5582525W"
   - name: PAYPAL_CLIENT_ID
-    value: "default"
+    value: "AfdKKH46rASiapwQ8JMQ8LA7SSdPyCff7-1lsTDPNELBp3Ee1PiQgMgHJI7JP3A7oP_AlXIyfhw3rtNj"
   - name: PAYPAL_CLIENT_SECRET
-    value: default
+    value: "EOo53067leUlvNEnB1VorpQSFLCWOzzR-iwtST6HSJbzErBisIF1nT3bIojVApypiogqplFmyZm2dBSv"
   - name: PAYPAL_URL
-    value: default
+    value: "https://api-m.sandbox.paypal.com"
   - name: SERVER_PORT
     value: "8080"
 serviceAccount:
