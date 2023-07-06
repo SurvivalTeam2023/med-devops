@@ -1,25 +1,26 @@
-version: '3'
+version: "3"
 services:
   keycloak:
-      image: quay.io/keycloak/keycloak:18.0.2-legacy
-      environment:
-        DB_VENDOR: MYSQL
-        DB_ADDR: db-med-dev.c60v4o2muaf0.ap-southeast-1.rds.amazonaws.com
-        DB_DATABASE: keycloak
-        DB_USER: root
-        DB_SCHEMA: public
-        DB_PASSWORD: med123456
-        KEYCLOAK_USER: admin
-        KEYCLOAK_PASSWORD: password
-        KC_HOSTNAME: http://14.225.204.74
-        PROXY_ADDRESS_FORWARDING: "true"
-        # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
-        #JDBC_PARAMS: "ssl=true"
-      ports:
-        - 8080:8080
-      command:
-        - "-c"
-        - "standalone.xml"
-        - "-Dkeycloak.profile.feature.token_exchange=enabled"
-        - "-Dkeycloak.profile.feature.admin_fine_grained_authz=enabled"
-        - "-Dkeycloak.profile.feature.impersonation=enabled"
+    image: quay.io/keycloak/keycloak:18.0.2-legacy
+    environment:
+      DB_VENDOR: MYSQL
+      DB_ADDR: db-med-dev.c60v4o2muaf0.ap-southeast-1.rds.amazonaws.com
+      DB_DATABASE: keycloak
+      DB_USER: root
+      DB_SCHEMA: public
+      DB_PASSWORD: med123456
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: password
+      KC_HOSTNAME: http://14.225.204.74
+      PROXY_ADDRESS_FORWARDING: "true"
+      # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
+      #JDBC_PARAMS: "ssl=true"
+    ports:
+      - 8080:8080
+    command:
+      - "-c"
+      - "standalone.xml"
+      - "-Dkeycloak.profile.feature.token_exchange=enabled"
+      - "-Dkeycloak.profile.feature.admin_fine_grained_authz=enabled"
+      - "-Dkeycloak.profile.feature.impersonation=enabled"
+    restart: always
