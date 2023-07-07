@@ -1,0 +1,76 @@
+replicaCount: 1
+
+image:
+  repository: public.ecr.aws/s5b2k5y9/med-app
+  pullPolicy: Always
+  tag: banhsbao-2022-12-12T14-51-16-602Z
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+extraEnvs:
+  - name: AWS_ACCESS_KEY_ID
+    value: ""
+  - name: AWS_SECRET_ACCESS_KEY
+    value: ""
+  - name: AWS_REGION
+    value: ap-southeast-1
+  - name: BUCKET_NAME
+    value: public-med-bucket-v1
+  - name: DB_USERNAME
+    value: root
+  - name: DB_PASSWORD
+    value: "sX0thYwNEl"
+  - name: DB_DATABASE
+    value: "playground_be"
+  - name: DB_HOST
+    value: "167.86.69.42"
+  - name: DB_PORT
+    value: "3306"
+  - name: PGADMIN_DEFAULT_EMAIL
+    value: admin@admin.com
+  - name: PGADMIN_DEFAULT_PASSWORD
+    value: admin
+  - name: SERVER_PORT
+    value: "8080"
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: LoadBalancer
+  containerPort: 8080
+  targetPort: 8080
+  port: 7003
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

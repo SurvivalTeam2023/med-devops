@@ -13,11 +13,11 @@ extraEnvs:
   - name: DB_USERNAME
     value: root
   - name: DB_PASSWORD
-    value: JCpulWbTp5
+    value: "sX0thYwNEl"
   - name: DB_DATABASE
-    value: med-dump-ai
+    value: "dev_be"
   - name: DB_HOST
-    value: 14.225.204.74
+    value: "167.86.69.42"
   - name: DB_PORT
     value: "3306"
   - name: SERVER_PORT

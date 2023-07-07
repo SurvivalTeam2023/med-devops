@@ -11,9 +11,9 @@ fullnameOverride: ""
 
 extraEnvs:
   - name: AWS_ACCESS_KEY_ID
-    value: AKIA23F3G5BOMIX7CCXQ
+    value: ""
   - name: AWS_SECRET_ACCESS_KEY
-    value: default
+    value: ""
   - name: AWS_REGION
     value: ap-southeast-1
   - name: BUCKET_NAME
@@ -21,11 +21,11 @@ extraEnvs:
   - name: DB_USERNAME
     value: root
   - name: DB_PASSWORD
-    value: med123456
+    value: "sX0thYwNEl"
   - name: DB_DATABASE
-    value: med-db
+    value: "dev_be"
   - name: DB_HOST
-    value: default
+    value: "167.86.69.42"
   - name: DB_PORT
     value: "3306"
   - name: PGADMIN_DEFAULT_EMAIL
@@ -49,7 +49,7 @@ service:
   type: LoadBalancer
   containerPort: 8080
   targetPort: 8080
-  port: 3001
+  port: 7002
 ingress:
   enabled: false
   className: ""

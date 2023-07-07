@@ -1,0 +1,62 @@
+replicaCount: 1
+
+image:
+  repository: public.ecr.aws/y8u9i3r8/med-be
+  pullPolicy: Always
+  tag: med-ai-2023-07-05T09-56-49-181Z
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+extraEnvs:
+  - name: DB_USERNAME
+    value: root
+  - name: DB_PASSWORD
+    value: "sX0thYwNEl"
+  - name: DB_DATABASE
+    value: "playground_be"
+  - name: DB_HOST
+    value: "167.86.69.42"
+  - name: DB_PORT
+    value: "3306"
+  - name: SERVER_PORT
+    value: "8082"
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: LoadBalancer
+  containerPort: 8000
+  targetPort: 8000
+  port: 8082
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
